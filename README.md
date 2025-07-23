@@ -11,7 +11,7 @@
 
   ![](images/pe_addon.png)
 
-- you may have to change the `adk_path` in `create_winpe.cmd` depending on your Windows version
+- you may have to change the `adk_path` in `create_winpe.cmd` depending on your ADK version
 - run `create_winpe.cmd` as admin in a folder you want the ISO to be created in
 - use Rufus or Ventoy for a bootable USB
 

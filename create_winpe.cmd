@@ -2,7 +2,7 @@
 
 setlocal
 
-:: YOU MAY HAVE TO CHANGE THIS DEPENDING ON WINDOWS VERSION
+:: YOU MAY HAVE TO CHANGE THIS DEPENDING ON ADK VERSION
 SET "adk_path=C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit"
 
 SET "current_dir=%~dp0"
