@@ -27,6 +27,7 @@ Dism /Add-Package /Image:"%winpe_path%\mount" /PackagePath:"%package_path%\WinPE
     echo SET "mousetester_m=X:\windows\mousetester\microe1\MouseTester.exe"
     echo SET "mousetester_v=X:\windows\mousetester\valleyofdoom\MouseTester.exe"
     echo SET "mousetester_d=X:\windows\mousetester\dobragab\MouseTester.exe"
+    echo SET "mouseplotter=X:\windows\mousetester\xbab\MousePlotter.exe"
 ) > "%winpe_path%\mount\windows\system32\startnet.cmd"
 
 reg load HKEY_USERS\WinPE_Default_User "%winpe_path%\mount\windows\system32\config\DEFAULT"
@@ -66,12 +67,16 @@ curl -L -o "%current_dir%\temp\mousetester_dobragab.zip" "https://github.com/dob
 tar -xf "%current_dir%\temp\mousetester_dobragab.zip" -C "%winpe_path%\mount\windows\mousetester\dobragab"
 
 
+mkdir "%winpe_path%\mount\windows\mousetester\xbab"
+curl -L -o "%winpe_path%\mount\windows\mousetester\xbab\MousePlotter.exe" "https://github.com/XBAB-Tech/MousePlotter/releases/download/v0.2/MousePlotter-v0.2-windows-x86_64.exe"
+
+
 Dism /Unmount-Image /MountDir:"%winpe_path%\mount" /commit
 MakeWinPEMedia /iso "%winpe_path%" "%current_dir%\WinPE.iso"
 
 
 :: https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install
-:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive?view=windows-10
-:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-mount-and-customize?view=windows-10
-:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference?view=windows-10
-:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-adding-powershell-support-to-windows-pe?view=windows-10
+:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive
+:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-mount-and-customize
+:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference
+:: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-adding-powershell-support-to-windows-pe
