@@ -68,7 +68,7 @@ tar -xf "%current_dir%\temp\mousetester_dobragab.zip" -C "%winpe_path%\mount\win
 
 
 mkdir "%winpe_path%\mount\windows\mousetester\xbab"
-curl -L -o "%winpe_path%\mount\windows\mousetester\xbab\MousePlotter.exe" "https://github.com/XBAB-Tech/MousePlotter/releases/download/v0.2/MousePlotter-v0.2-windows-x86_64.exe"
+curl -L -o "%winpe_path%\mount\windows\mousetester\xbab\MousePlotter.exe" "https://github.com/XBAB-Tech/MousePlotter/releases/download/v1.0/MousePlotter-v1.0-windows-x86_64.exe"
 
 
 Dism /Unmount-Image /MountDir:"%winpe_path%\mount" /commit
