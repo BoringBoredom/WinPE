@@ -17,5 +17,5 @@
 
 ## App shortcuts
 
-- run `%mousetester_v%` etc. in the command prompt to launch apps
+- run `%mouseplotter%`, `%mousetester_v%` etc. in the command prompt to launch apps
 - the `%screenshot%` command takes a target directory as argument, e.g., `%screenshot% C:\screenshot.png`, and has a 2-second delay
